@@ -1,0 +1,39 @@
+.item {
+  padding: 8px;
+
+  font-size: 15px;
+  line-height: 20px;
+
+  color: #333333;
+  background: #f6f7f800;
+
+  border-radius: 8px;
+
+  display: flex;
+  align-items: center;
+
+  cursor: pointer;
+
+  transition: all 0.1s ease;
+
+  &:hover {
+    background: rgba(0, 16, 61, 0.04);
+  }
+
+  .icon {
+    width: 20px;
+    height: 20px;
+    margin: 0 8px 0 0;
+
+    user-select: none;
+  }
+
+  &.active {
+    font-weight: 700;
+    background: rgba(0, 16, 61, 0.08);
+
+    &:hover {
+      background: rgba(0, 16, 61, 0.08);
+    }
+  }
+}

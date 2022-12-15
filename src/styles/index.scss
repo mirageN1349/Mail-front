@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: #f6f7f8;
+}
+
+.page {
+  margin: 70px 0 0 0;
+
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  .container {
+    width: calc(100% - 32px);
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .content {
+    width: calc(100% - 216px);
+  }
+}

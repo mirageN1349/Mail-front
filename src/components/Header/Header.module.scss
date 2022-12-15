@@ -1,0 +1,27 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+
+  width: 100%;
+  height: 56px;
+
+  background-color: #fff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .container {
+    width: calc(100% - 16px * 2);
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+  }
+
+  .logo {
+    height: 32px;
+  }
+}
