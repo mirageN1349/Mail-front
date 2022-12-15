@@ -11,6 +11,7 @@
 
   display: flex;
   align-items: center;
+  justify-content: space-between;
 
   cursor: pointer;
 
@@ -28,9 +29,29 @@
     user-select: none;
   }
 
+  .left {
+    display: flex;
+    align-items: center;
+  }
+
+  .count {
+    font-size: 13px ;
+    font-weight: 400;
+  }
+
+  transition: all .2s ease;
+
+  &:active{
+    transform: scale(0.95);
+  }
+
   &.active {
     font-weight: 700;
     background: rgba(0, 16, 61, 0.08);
+
+    &:active{
+      transform: none;
+    }
 
     &:hover {
       background: rgba(0, 16, 61, 0.08);

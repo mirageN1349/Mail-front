@@ -10,6 +10,38 @@
     background: rgba(0, 16, 61, 0.12);
   }
 
+  .writeMail {
+    margin: 0 0 20px 0;
+    width: 100%;
+    height: 36px;
+    background: #ffffff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 20px;
+
+    color: #333333;
+
+    cursor: pointer;
+
+    border: 1px solid rgba(0, 16, 61, 0.12);
+    border-radius: 8px;
+
+    transition: all .2s ease;
+
+    &:active{
+      transform: scale(0.95);
+    }
+
+    &:hover {
+      background: rgba(0, 16, 61, 0.04);
+    }
+  }
+
   .addButton {
     padding: 8px;
 
@@ -37,19 +69,19 @@
       background: rgba(0, 16, 61, 0.04);
     }
 
+    transition: all .2s ease;
+
+    &:active{
+      transform: scale(0.95);
+    }
+  
+
     .icon {
       width: 20px;
       height: 20px;
       margin: 0 8px 0 0;
 
       user-select: none;
-    }
-
-    &.add {
-      opacity: 0.48;
-      &:hover {
-        opacity: 1;
-      }
     }
   }
 }
