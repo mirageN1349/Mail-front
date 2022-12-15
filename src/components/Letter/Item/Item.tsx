@@ -17,7 +17,7 @@ type Props = {
 export function LetterItem({ letter, type, isSelected, onClickSelect }: Props) {
   const [isMarked, setIsMarked] = useState(false);
 
-  const { id, author, content, isRead, createdAt } = letter;
+  const { id, createdAt, author, content, isRead, count } = letter;
 
   return (
     <div className={`${s.mail} ${!isRead ? s.unread : ''} ${s[type]} ${isSelected ? s.selected : ''}`}>
@@ -28,7 +28,7 @@ export function LetterItem({ letter, type, isSelected, onClickSelect }: Props) {
       <div className={s.content}>
         <div className={s.author}>{author.name}</div>
         <Bookmark isMarked={isMarked} onClick={() => setIsMarked(!isMarked)} />
-        <Info date={createdAt} text={content.text} title={content.title} formatDate={formatDate} />
+        <Info date={createdAt} count={count} text={content.text} title={content.title} formatDate={formatDate} />
         <div className={s.divider}></div>
       </div>
     </div>

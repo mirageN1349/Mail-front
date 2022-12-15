@@ -3,13 +3,11 @@ import { LetterList } from './components/Letter/List/List';
 import { Sidebar } from './components/Sidebar/Sidebar';
 import { Header } from './components/Header/Header';
 
-import s from './styles/index.scss';
-import httpRequest from './core/request';
-
 const letters = [
   {
     id: '123',
     createdAt: new Date(),
+    count: 1,
     author: {
       name: 'Михаил Бебрулин',
       avatar:
@@ -24,6 +22,7 @@ const letters = [
   {
     id: '2',
     createdAt: new Date(),
+    count: 5,
     author: {
       name: 'Михаил Бебрулин',
       avatar:
@@ -38,6 +37,7 @@ const letters = [
   {
     id: '3',
     createdAt: new Date('02.01.2022 15:54'),
+    count: 2,
     author: {
       name: 'Михаил Бебрулин',
       avatar:
@@ -103,6 +103,7 @@ const letters = [
   },
   {
     id: 'bebra1',
+    count: 3,
     createdAt: new Date(),
     author: {
       name: 'Кирилл Золкин',

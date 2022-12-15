@@ -1,6 +1,7 @@
 export type LetterDto = {
   id: string;
   createdAt: Date;
+  count?: number;
   author: {
     name: string;
     avatar?: string;
