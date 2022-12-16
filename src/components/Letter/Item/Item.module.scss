@@ -87,6 +87,7 @@
     border-radius: 4px;
 
     cursor: pointer;
+    user-select: none;
     opacity: 0;
 
     transition: all 0.2s ease;
@@ -145,6 +146,18 @@
     width: calc(100% - 204px);
     display: flex;
     align-items: center;
+  }
+
+  .categories {
+    margin: 0 0 0 18px;
+    display: flex;
+    align-items: center;
+    column-gap: 6px;
+  }
+
+  .categoryIcon {
+    width: 20px;
+    height: 20px;
   }
 
   .text {

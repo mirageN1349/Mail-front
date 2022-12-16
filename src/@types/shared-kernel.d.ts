@@ -6,5 +6,6 @@ type SomeString = string;
 type Uuid = string;
 type Token = string;
 type DateString = string;
+type ImageString = string;
 type Valid = boolean;
 type Access = boolean;

@@ -1,15 +1,22 @@
+import { User } from '../../../@types/entities/User';
+
+export type LetterCategory =
+  | 'shop'
+  | 'finances'
+  | 'registration'
+  | 'travel'
+  | 'tickets'
+  | 'taxes';
+
 export type LetterDto = {
   id: string;
-  createdAt: Date;
+  date: DateString;
   count?: number;
-  author: {
-    name: string;
-    avatar?: string;
-  };
-  content: {
-    title: string;
-    text: string;
-  };
-  isRead?: boolean;
-  isMarked?: boolean;
+  author: User;
+  title: string;
+  text: string;
+  read: boolean;
+  important: boolean;
+  bookmark: boolean;
+  categories?: LetterCategory[];
 };

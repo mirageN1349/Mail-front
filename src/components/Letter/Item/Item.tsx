@@ -15,20 +15,39 @@ type Props = {
 };
 
 export function LetterItem({ letter, type, isSelected, onClickSelect }: Props) {
-  const [isMarked, setIsMarked] = useState(false);
+  const { id, date, author, text, title, categories, read, bookmark, count } =
+    letter;
 
-  const { id, createdAt, author, content, isRead, count } = letter;
+  const [isMarked, setIsMarked] = useState(bookmark);
 
   return (
-    <div className={`${s.mail} ${!isRead ? s.unread : ''} ${s[type]} ${isSelected ? s.selected : ''}`}>
+    <div
+      className={`${s.mail} ${!read ? s.unread : ''} ${s[type]} ${
+        isSelected ? s.selected : ''
+      }`}
+    >
       <div className={s.dot}></div>
       <div className={s.avatarWrapper}>
-        <Avatar onClick={() => onClickSelect(id)} isSelected={!!isSelected} avatarSrc={author.avatar} htmlFor={id} />
+        <Avatar
+          onClick={() => onClickSelect(id)}
+          isSelected={!!isSelected}
+          avatarSrc={author.avatar}
+          htmlFor={id}
+        />
       </div>
       <div className={s.content}>
-        <div className={s.author}>{author.name}</div>
+        <div className={s.author}>
+          {author.name} {author.surname}
+        </div>
         <Bookmark isMarked={isMarked} onClick={() => setIsMarked(!isMarked)} />
-        <Info date={createdAt} count={count} text={content.text} title={content.title} formatDate={formatDate} />
+        <Info
+          date={date}
+          count={count}
+          text={text}
+          title={title}
+          categories={categories}
+          formatDate={formatDate}
+        />
         <div className={s.divider}></div>
       </div>
     </div>
