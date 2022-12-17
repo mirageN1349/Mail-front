@@ -12,4 +12,7 @@ export type LetterDto = {
   important: boolean;
   bookmark: boolean;
   category?: MailCategory;
+  doc?: {
+    img?: ImageString;
+  };
 };

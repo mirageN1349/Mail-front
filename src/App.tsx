@@ -8,7 +8,7 @@ import { useState } from 'react';
 import { LetterPage } from './components/Letter/Page/Page';
 
 function App() {
-  const [openedLetterId, setOpenedLetterId] = useState<null | string>(null)
+  const [openedLetterId, setOpenedLetterId] = useState<null | string>(null);
   const formattedLetter: LetterDto[] = mockMails.map(mail => ({
     id: mail.id,
     author: mail.author,
@@ -18,7 +18,8 @@ function App() {
     read: mail.read,
     text: mail.text,
     title: mail.title,
-    category: mail.category
+    category: mail.category,
+    doc: mail.doc,
   }));
 
   return (
@@ -28,7 +29,11 @@ function App() {
         <div className="container">
           <Sidebar />
           <div className="content">
-           {openedLetterId ? <LetterPage letter={mockMails[7]} /> : <LetterList letters={formattedLetter} />}
+            {openedLetterId ? (
+              <LetterPage letter={mockMails[7]} />
+            ) : (
+              <LetterList letters={formattedLetter} />
+            )}
           </div>
         </div>
       </div>

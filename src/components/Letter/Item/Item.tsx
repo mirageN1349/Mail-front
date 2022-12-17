@@ -15,8 +15,18 @@ type Props = {
 };
 
 export function LetterItem({ letter, type, isSelected, onClickSelect }: Props) {
-  const { id, date, author, text, title, category, read, bookmark, count } =
-    letter;
+  const {
+    id,
+    date,
+    author,
+    text,
+    doc,
+    title,
+    category,
+    read,
+    bookmark,
+    count,
+  } = letter;
 
   const [isMarked, setIsMarked] = useState(bookmark);
 
@@ -46,6 +56,7 @@ export function LetterItem({ letter, type, isSelected, onClickSelect }: Props) {
           text={text}
           title={title}
           category={category}
+          doc={doc}
           formatDate={formatDate}
         />
         <div className={s.divider}></div>
