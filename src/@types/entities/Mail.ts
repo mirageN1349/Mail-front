@@ -19,7 +19,7 @@ export type Mail = {
   read: boolean;
   folder: string;
   date: DateString;
-  categories?: MailCategory[];
+  category?: MailCategory;
   doc?: {
     img?: ImageString;
   };

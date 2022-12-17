@@ -14,3 +14,12 @@ export const letterCategoryIcon: Record<MailCategory, string> = {
   tickets: TicketsIcon,
   taxes: GovernmentIcon,
 };
+
+export const letterCategoryName: Record<MailCategory, string> = {
+  finances: 'Финансы',
+  shop: 'Заказы',
+  registration: 'Регистрации',
+  travel: 'Путешествия',
+  tickets: 'Билеты',
+  taxes: 'Штрафы и налоги',
+}

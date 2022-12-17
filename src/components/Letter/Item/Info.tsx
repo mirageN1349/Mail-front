@@ -7,7 +7,7 @@ type Props = {
   title: SomeString;
   text: SomeString;
   date: DateString;
-  categories?: MailCategory[];
+  category?: MailCategory;
   count?: number;
   formatDate: (date: DateString) => string;
 };
@@ -16,7 +16,7 @@ export function Info({
   text,
   title,
   count,
-  categories,
+  category,
   date,
   formatDate,
 }: Props) {
@@ -28,13 +28,9 @@ export function Info({
         {text}
       </div>
       <div className={s.categories}>
-        {categories?.map((category, i) => (
-          <img
-            key={i}
-            className={s.categoryIcon}
-            src={letterCategoryIcon[category]}
-          />
-        ))}
+        {category && (
+          <img className={s.categoryIcon} src={letterCategoryIcon[category]} />
+        )}
       </div>
       <div className={s.date}>{formatDate(date)}</div>
     </div>

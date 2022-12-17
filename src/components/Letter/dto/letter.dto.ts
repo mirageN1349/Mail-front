@@ -1,12 +1,5 @@
+import { MailCategory } from '../../../@types/entities/Mail';
 import { User } from '../../../@types/entities/User';
-
-export type LetterCategory =
-  | 'shop'
-  | 'finances'
-  | 'registration'
-  | 'travel'
-  | 'tickets'
-  | 'taxes';
 
 export type LetterDto = {
   id: string;
@@ -18,5 +11,5 @@ export type LetterDto = {
   read: boolean;
   important: boolean;
   bookmark: boolean;
-  categories?: LetterCategory[];
+  category?: MailCategory;
 };

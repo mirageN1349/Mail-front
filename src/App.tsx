@@ -4,8 +4,11 @@ import { Sidebar } from './components/Sidebar/Sidebar';
 import { Header } from './components/Header/Header';
 import { mockMails } from './constants/mails';
 import { LetterDto } from './components/Letter/dto/letter.dto';
+import { useState } from 'react';
+import { LetterPage } from './components/Letter/Page/Page';
 
 function App() {
+  const [openedLetterId, setOpenedLetterId] = useState<null | string>(null)
   const formattedLetter: LetterDto[] = mockMails.map(mail => ({
     id: mail.id,
     author: mail.author,
@@ -15,7 +18,7 @@ function App() {
     read: mail.read,
     text: mail.text,
     title: mail.title,
-    categories: mail.categories,
+    category: mail.category
   }));
 
   return (
@@ -25,7 +28,7 @@ function App() {
         <div className="container">
           <Sidebar />
           <div className="content">
-            <LetterList letters={formattedLetter} />
+           {openedLetterId ? <LetterPage letter={mockMails[7]} /> : <LetterList letters={formattedLetter} />}
           </div>
         </div>
       </div>

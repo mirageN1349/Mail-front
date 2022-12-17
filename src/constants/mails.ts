@@ -73,7 +73,7 @@ export const mockMails: Mail[] = [
         'https://images.unsplash.com/photo-1599566150163-29194dcaad36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80',
       email: 'baruli.ma@gmail.com',
     },
-    categories: ['registration'],
+    category: 'registration',
     to: [
       {
         name: 'Дирдь',
@@ -237,7 +237,7 @@ export const mockMails: Mail[] = [
         email: 'alternativeexpulsion@mail.ru',
       },
     ],
-    categories: ['finances'],
+    category: 'finances',
     title: 'Что такое бебра?',
     text: 'Все задаются вопросом про бебру. Но что же это на самом деле? Вы узнаете перейдя по ссылке ниже',
     bookmark: true,
@@ -301,7 +301,7 @@ export const mockMails: Mail[] = [
         email: 'alternativeexpulsion@mail.ru',
       },
     ],
-    categories: ['tickets'],
+    category: 'tickets',
     title: 'Что такое бебра?',
     text: 'Все задаются вопросом про бебру. Но что же это на самом деле? Вы узнаете перейдя по ссылке ниже',
     bookmark: false,
