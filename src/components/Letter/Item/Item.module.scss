@@ -8,6 +8,8 @@
 
   cursor: pointer;
 
+  background: var(--primary-color);
+
   transition: background 0.3s ease, border-radius 0.3s ease;
 
   .dot {
@@ -15,7 +17,7 @@
     width: 6px;
     height: 6px;
     border-radius: 10px;
-    background: #005ff900;
+    background: var(--icon-secondary-color);
   }
 
   .count {
@@ -77,7 +79,7 @@
     width: 16px;
     height: 16px;
     z-index: 1;
-    background: #ffffff;
+    background: var(--primary-color);
 
     display: flex;
     align-items: center;
@@ -107,7 +109,7 @@
     position: absolute;
     top: 0px;
     left: 0;
-    background: #00103d1f;
+    background: var(--divider-color);
   }
 
   .bookmark {
@@ -140,6 +142,7 @@
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+    color: var(--text-primary-color);
   }
 
   .info {
@@ -166,6 +169,12 @@
 
       border-radius: 8px;
 
+      svg {
+        path {
+          fill: var(--icon-primary-color);
+        }
+      }
+
       &:hover {
         background: rgba(0, 16, 61, 0.08);
       }
@@ -177,19 +186,19 @@
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
-    color: #87898f;
+    color: var(--text-secondary-color);
     font-size: 15px;
   }
 
   .title {
     margin: 0 8px 0 0;
-    color: #2c2d2e;
+    color: var(--text-primary-color);
   }
 
   .date {
     margin: 0 0 0 24px;
     font-size: 13px;
-    color: #87898f;
+    color: var(--text-secondary-color);
   }
 
   &.unread {
@@ -207,10 +216,14 @@
   }
 
   &:hover {
-    background: rgba(0, 16, 61, 0.04);
+    background: var(--primary-hover-color);
 
     .bookmark {
       opacity: 1;
+
+      .importantIcon {
+        display: none;
+      }
     }
 
     .avatar {
@@ -240,7 +253,7 @@
   }
 
   &.selected {
-    background: rgba(0, 16, 61, 0.08);
+    background: var(--primary-selected-color);
 
     .avatar {
       transform: scale(0.4);
@@ -291,7 +304,7 @@
   position: absolute;
   padding: 8px 0;
   width: 298px;
-  background: #ffffff;
+  background: var(--primary-color);
   box-shadow: 0px 4px 32px rgba(0, 16, 61, 0.24);
   border-radius: 12px;
 
@@ -303,12 +316,12 @@
     display: flex;
     align-items: center;
 
-    font-family: "Helvetica Neue", sans-serif;
+    font-family: 'Helvetica Neue', sans-serif;
     font-weight: 400;
     font-size: 15px;
 
     cursor: pointer;
-    color: #333333;
+    color: var(--text-primary-color);
 
     .image {
       margin: 0 8px 0 0;
@@ -332,7 +345,7 @@
       left: -10px;
       transform: translate(-100%, -50%);
 
-      background-color: #ffffff;
+      background-color: var(--primary-color);
       padding: 4px;
       width: 256px;
       height: 198px;

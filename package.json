@@ -5,14 +5,17 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "start:dev": "node --watch server.mjs",
+    "start:prod": "node server.mjs",
     "build": "tsc && vite build",
     "preview": "vite preview"
   },
   "dependencies": {
-    "react": "^18.2.0",
+    "react": "~18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "vite-plugin-static-copy": "~0.13.0",
     "@types/node": "^18.11.15",
     "@types/react": "^18.0.26",
     "@types/react-dom": "^18.0.9",

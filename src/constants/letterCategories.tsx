@@ -6,7 +6,9 @@ import TicketsIcon from './../assets/icons/tickets.svg';
 import FinancesIcon from './../assets/icons/finances.svg';
 import { MailCategory } from '../@types/entities/Mail';
 
-export const letterCategoryIcon: Record<MailCategory, string> = {
+type EngMailCategory = 'shop' | 'finances' | 'registration' | 'travel' | 'tickets' | 'taxes';
+
+export const letterCategoryIcon: Record<EngMailCategory, string> = {
   finances: FinancesIcon,
   shop: CartIcon,
   registration: KeyIcon,
@@ -15,11 +17,17 @@ export const letterCategoryIcon: Record<MailCategory, string> = {
   taxes: GovernmentIcon,
 };
 
-export const letterCategoryName: Record<MailCategory, string> = {
+export const letterCategoryName: Record<EngMailCategory, MailCategory> = {
   finances: 'Финансы',
   shop: 'Заказы',
   registration: 'Регистрации',
-  travel: 'Путешествия',
+  travel: 'Путешевствия',
   tickets: 'Билеты',
   taxes: 'Штрафы и налоги',
-}
+};
+
+export const getLetterCategoryIcon = (flag: MailCategory) => {
+  const categoryKey = Object.keys(letterCategoryName).find(key => letterCategoryName[key] === flag);
+  if (!categoryKey) return;
+  return letterCategoryIcon[categoryKey];
+};

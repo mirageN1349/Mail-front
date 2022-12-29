@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 
 import s from './Item.module.scss';
 
 type Props = {
-  icon: string;
+  icon: ReactNode;
   title: string;
   isActive?: boolean;
   count?: number;
@@ -14,7 +14,7 @@ export const SidebarItem = ({ icon, title, count, isActive, onClick }: Props) =>
   return (
     <div className={`${s.item} ${isActive ? s.active : ''}`} onClick={onClick}>
       <div className={s.left}>
-        <img className={s.icon} src={icon} />
+        <div className={s.icon}>{icon}</div>
         {title}
       </div>
       {count && <div className={s.count}>{count}</div>}

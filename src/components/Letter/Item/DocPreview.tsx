@@ -1,11 +1,4 @@
-import React, {
-  MutableRefObject,
-  ReactNode,
-  useEffect,
-  useLayoutEffect,
-  useRef,
-  useState,
-} from 'react';
+import React, { MutableRefObject, ReactNode, useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { useOnClickOutside } from '../../../hooks/useOnClickOutside';
 
@@ -15,11 +8,12 @@ type Props = {
   doc: {
     img?: ImageString;
   };
+  ref?: any;
   docElement: MutableRefObject<HTMLImageElement | null>;
   onClose: () => void;
 };
 
-export const DocPreview = ({ doc, docElement, onClose }: Props) => {
+export const DocPreview = ({ doc, ref, docElement, onClose }: Props) => {
   const { img } = doc;
   const [modalPosition, setModalPosition] = useState({
     top: 0,
@@ -33,11 +27,7 @@ export const DocPreview = ({ doc, docElement, onClose }: Props) => {
   useEffect(() => {
     if (!docElement.current || !modalRef.current) return;
 
-    const {
-      top,
-      left,
-      height: docHeight,
-    } = docElement.current.getBoundingClientRect();
+    const { top, left, height: docHeight } = docElement.current.getBoundingClientRect();
     const { height: modalHeight } = modalRef.current.getBoundingClientRect();
 
     setModalPosition({
@@ -62,7 +52,7 @@ export const DocPreview = ({ doc, docElement, onClose }: Props) => {
         <div className={s.image}>
           <img src={img} />
         </div>
-        Какой-то текст
+        Какой-то текст 1.26 MB
       </div>
     </div>,
     document.getElementById('modal-root')!

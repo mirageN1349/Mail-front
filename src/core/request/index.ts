@@ -22,7 +22,7 @@ const httpRequest = {
     }
   },
 
-  async get(url = '', options: FetchGetOptions = {}) {
+  async get<T extends unknown>(url = '', options: FetchGetOptions = {}): Promise<T> {
     return await this.request(url, options);
   },
 

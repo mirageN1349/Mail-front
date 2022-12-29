@@ -11,7 +11,8 @@ export type LetterDto = {
   read: boolean;
   important: boolean;
   bookmark: boolean;
-  category?: MailCategory;
+  flag?: MailCategory;
+  to: User[];
   doc?: {
     img?: ImageString;
   };

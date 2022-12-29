@@ -1,12 +1,6 @@
 import { User } from './User';
 
-export type MailCategory =
-  | 'shop'
-  | 'finances'
-  | 'registration'
-  | 'travel'
-  | 'tickets'
-  | 'taxes';
+export type MailCategory = 'Заказы' | 'Финансы' | 'Билеты' | 'Путешевствия' | 'Регистрации' | 'Штрафы и налоги';
 
 export type Mail = {
   id: string;
@@ -19,7 +13,7 @@ export type Mail = {
   read: boolean;
   folder: string;
   date: DateString;
-  category?: MailCategory;
+  flag?: MailCategory;
   doc?: {
     img?: ImageString;
   };

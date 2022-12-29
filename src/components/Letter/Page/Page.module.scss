@@ -1,90 +1,154 @@
 .letter {
-    padding: 16px 32px;
+  padding: 16px 32px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  border-radius: 12px;
+
+  background: var(--primary-color);
+
+  overflow: hidden;
+
+  .avatarWrapper {
+    margin: 0 12px 0 0;
+    width: 32px;
+    height: 32px;
+    border-radius: 99px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .avatar {
     width: 100%;
+    height: 100%;
+    border-radius: 99px;
+
+    background-color: #c3c3c3;
+    object-fit: cover;
+    transition: all 0.2s ease;
+  }
+
+  .title {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin: 0 0 24px 0;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    color: var(--text-primary-color);
+
+    .category {
+      display: flex;
+      align-items: center;
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 20px;
+
+      .icon {
+        margin: 0 8px 0 0;
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+
+  .info {
+    display: flex;
+    align-items: center;
+  }
+
+  .mailInfo {
     display: flex;
     flex-direction: column;
 
-    border-radius: 12px;
-
-    background-color: #fff;
-
-    overflow: hidden;
-
-    .avatarWrapper {
-        margin: 0 12px 0 12px;
-        width: 32px;
-        height: 32px;
-        border-radius: 99px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        overflow: hidden;
+    .top {
+      display: flex;
+      align-items: center;
     }
 
-    .avatar {
-        width: 100%;
-        height: 100%;
-        border-radius: 99px;
-
-        background-color: #c3c3c3;
-        object-fit: cover;
-        transition: all 0.2s ease;
+    .author {
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 20px;
+      color: var(--text-primary-color);
     }
 
-    .title {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+    .date {
+      margin: 0 0 0 8px;
+      font-weight: 400;
+      font-size: 13px;
 
-        margin: 0 0 24px 0;
-        font-weight: 700;
-        font-size: 24px;
-        line-height: 28px;
-
-        color: #2c2d2e;
-
-        .category {
-            display: flex;
-            align-items: center;
-            font-weight: 400;
-            font-size: 13px;
-            line-height: 20px;
-
-            .icon {
-                margin: 0 8px 0 0;
-                width: 16px;
-                height: 16px;
-            }
-        }
+      color: var(--text-secondary-color);
     }
 
-    .info {
-        display: flex;
-        align-items: center;
+    .bottom {
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 18px;
+      color: var(--text-secondary-color);
     }
 
-    .mailInfo {
-        display: flex;
-        flex-direction: column;
-
-        .author {
-            font-weight: 400;
-            font-size: 15px;
-            line-height: 20px;
-        }
+    .hidden {
+      text-decoration: underline;
+      cursor: pointer;
     }
+  }
 
-    .text {
-        margin: 28px;
-        width: 100%;
+  .text {
+    margin: 28px 0;
+    width: 100%;
 
-        font-family: "Helvetica Neue", sans-serif;
-        font-style: normal;
-        font-weight: 400;
-        font-size: 15px;
-        line-height: 20px;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
 
-        color: #2c2d2e;
+    color: var(--text-secondary-color);
+  }
+}
+
+.media {
+  margin: 20px 0 0 0;
+  .previews {
+    margin: 0 0 8px 0;
+    display: flex;
+    align-items: center;
+    height: 190px;
+
+    .image {
+      height: 100%;
+      border-radius: 12px;
+
+      cursor: pointer;
     }
+  }
+
+  .info {
+    font-family: 'Helvetica Neue', sans-serif;
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+
+    color: var(--text-primary-color);
+  }
+
+  .download {
+    margin: 0 0 0 16px;
+    font-size: 13px;
+    line-height: 18px;
+
+    color: #005bd1;
+    cursor: pointer;
+  }
+
+  .size {
+    color: var(--text-secondary-color);
+  }
 }

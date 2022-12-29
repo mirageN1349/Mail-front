@@ -6,9 +6,10 @@ import s from './List.module.scss';
 
 type Props = {
   letters: LetterDto[];
+  onClickLetter: (id: string) => void;
 };
 
-export function LetterList({ letters }: Props) {
+export function LetterList({ letters, onClickLetter }: Props) {
   const [selectedIds, setSelectedIds] = useState<string[]>([]);
 
   const toggleSelect = (id: string) => {
@@ -54,6 +55,7 @@ export function LetterList({ letters }: Props) {
           letter={letter}
           isSelected={isSelected(letter.id)}
           onClickSelect={toggleSelect}
+          onClick={() => onClickLetter(letter.id)}
         />
       ))}
     </div>
